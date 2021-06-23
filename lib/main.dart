@@ -3,10 +3,10 @@ import 'ui/pages/pages.dart';
 import 'themes/themes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(AppWidget());
 }
 
-class MyApp extends StatelessWidget {
+class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme(),
       darkTheme: darkTheme(),
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }

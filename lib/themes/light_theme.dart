@@ -5,7 +5,7 @@ import 'app_colors.dart';
 ThemeData lightTheme() {
   final brightness = Brightness.light;
   final primaryColor = AppColors.primary;
-  final backgroundColor = Colors.grey[100];
+  final backgroundColor = AppColors.background;
 
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
