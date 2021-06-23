@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ui/pages/pages.dart';
+import 'themes/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,9 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'PayFlow',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: lightTheme(),
+      darkTheme: darkTheme(),
       home: HomePage(),
     );
   }
