@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'app_colors.dart';
 
 
@@ -7,7 +8,7 @@ ThemeData darkTheme() {
   final primaryColor = AppColors.primary;
   final backgroundColor = Colors.grey[800];
 
-  //SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 
   return ThemeData(
     brightness: brightness,
