@@ -52,12 +52,10 @@ class _LoginPageState extends State<LoginPage> {
                         GoogleSignIn _googleSignIn = GoogleSignIn(
                           scopes: [
                             'email',
-                            'https://www.googleapis.com/auth/contacts.readonly',
                           ],
                         );
                         try {
                           final response = await _googleSignIn.signIn();
-                          print("response");
                           print(response);
                         } catch (error) {
                           print(error);
