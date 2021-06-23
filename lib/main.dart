@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme(),
       darkTheme: darkTheme(),
-      home: SplashPage(),
+      home: LoginPage(),
     );
   }
 }
