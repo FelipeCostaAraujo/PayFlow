@@ -46,7 +46,11 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 40,right: 40,top: 40),
-                    child: ButtonSocialGoogle(),
+                    child: ButtonSocialGoogle(
+                      onTap: (){
+                        //
+                      },
+                    ),
                   )
                 ],
               ),
@@ -56,4 +60,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
+
 }
