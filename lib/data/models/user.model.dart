@@ -1,8 +1,8 @@
 class UserModel {
-  late String displayName;
-  late String email;
-  late int id;
-  late String photoUrl;
+  String? displayName;
+  String? email;
+  String? id;
+  String? photoUrl;
 
   UserModel({required this.displayName, required this.email, required this.id, required this.photoUrl});
 
@@ -20,6 +20,17 @@ class UserModel {
     data['id'] = this.id;
     data['photoUrl'] = this.photoUrl;
     return data;
+  }
+
+  Map<String, dynamic> toMap() => {
+    "name" : displayName,
+    "email" : email,
+    "id" : id,
+    "photoUrl" : photoUrl,
+  };
+  
+  factory UserModel.fromMap(Map<String, dynamic> map){
+    return UserModel(displayName: map['displayName'], email: map['email'], id: map['id'], photoUrl: map['photoUrl']);
   }
 }
 

@@ -1,22 +1,38 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:payflow/ui/pages/pages.dart';
+import 'package:payflow/data/models/models.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController{
-  bool _isAuthenticated = false;
-  late GoogleSignInAccount _user;
+  final String userPath = "user";
+  UserModel? _user;
 
-  get user => _user;
+  UserModel get user => _user!;
 
-  void setUser(BuildContext context, user){
+  Future<void> setUser(BuildContext context, user) async{
     if(user != null){
-      _isAuthenticated = true;
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+      await saveUser(user);
+      Navigator.pushReplacementNamed(context, "/home");
     } else {
-      _isAuthenticated = false;
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => LoginPage()));
+      Navigator.pushReplacementNamed(context, "/login");
+    }
+  }
+
+  Future<void> saveUser(UserModel user) async{
+    final instance = await SharedPreferences.getInstance();
+    await instance.setString(userPath, jsonEncode(user.toJson()));
+  }
+
+  Future<void> currentUser(context) async{
+    try{
+      final instance = await SharedPreferences.getInstance();
+      var userString = instance.getString(userPath);
+      var user = UserModel.fromJson(jsonDecode(userString!));
+      setUser(context, user);
+    }catch(ex){
+      print(ex);
+      setUser(context, null);
     }
   }
 }

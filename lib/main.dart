@@ -14,7 +14,12 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme(),
       darkTheme: darkTheme(),
-      home: SplashPage(),
+      initialRoute: "/splash",
+      routes: {
+        "/splash" : (context) => SplashPage(),
+        "/login" : (context) => LoginPage(),
+        "/home" : (context) => HomePage(),
+      },
     );
   }
 }

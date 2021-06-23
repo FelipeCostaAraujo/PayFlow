@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:payflow/data/auth/auth_controller.dart';
 
 import './components/components.dart';
 
@@ -15,13 +16,13 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+  final authController = AuthController();
 
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3)).then((_) {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => LoginPage()));
+    Future.delayed(Duration(seconds: 2)).then((_) {
+      authController.currentUser(context);
     });
   }
 
