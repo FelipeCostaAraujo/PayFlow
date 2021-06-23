@@ -39,7 +39,6 @@ class _SplashPageState extends State<SplashPage> {
                 if(snapshot.connectionState == ConnectionState.waiting){
                   Center(child: CircularProgressIndicator());
                 }
-
                 if(snapshot.hasError){
                   return errorInitialization();
                 }
