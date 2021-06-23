@@ -33,6 +33,7 @@ android {
         applicationId "com.payflow.payflow"
         minSdkVersion 23
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -51,6 +52,7 @@ flutter {
 }
 
 dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
     implementation platform('com.google.firebase:firebase-bom:28.1.0')
     implementation 'com.google.firebase:firebase-analytics'
 }
