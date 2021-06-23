@@ -1,5 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import './components/components.dart';
+
 import '../../../themes/themes.dart';
 import '../pages.dart';
 
@@ -14,6 +17,15 @@ class _SplashPageState extends State<SplashPage> {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 3)).then((_) {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => LoginPage()));
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -24,15 +36,15 @@ class _SplashPageState extends State<SplashPage> {
             child: FutureBuilder(
               future: _initialization,
               builder: (BuildContext context, AsyncSnapshot snapshot){
-                print(snapshot);
+                if(snapshot.connectionState == ConnectionState.waiting){
+                  Center(child: CircularProgressIndicator());
+                }
+
                 if(snapshot.hasError){
-                  return Container();
+                  return errorInitialization();
                 }
                 if(snapshot.connectionState == ConnectionState.done){
                   return Center(child: CircularProgressIndicator());
-                }
-                if(snapshot.hasData){
-                  _nextPage(context);
                 }
                 return Container();
               },
@@ -43,7 +55,4 @@ class _SplashPageState extends State<SplashPage> {
     );
   }
 
-  void _nextPage(context){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));
-  }
 }
