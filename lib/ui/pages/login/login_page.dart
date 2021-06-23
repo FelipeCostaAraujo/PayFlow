@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/themes/themes.dart';
 
+import './components/components.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -42,6 +44,10 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.only(right: 70,left: 70,top: 30),
                     child: Text("Organize seus boletos em um só lugar",style: TextStyles.titleHome,textAlign: TextAlign.center),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 40,right: 40,top: 40),
+                    child: ButtonSocialGoogle(),
+                  )
                 ],
               ),
             )

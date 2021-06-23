@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../themes/app_images.dart';
+import '../../../themes/themes.dart';
 import '../pages.dart';
 
 class SplashPage extends StatelessWidget {

@@ -16,6 +16,7 @@ ThemeData lightTheme() {
       ),
       primaryColor: primaryColor,
       backgroundColor: backgroundColor,
+      scaffoldBackgroundColor: backgroundColor,
       accentColor: Colors.black,
   );
 }
