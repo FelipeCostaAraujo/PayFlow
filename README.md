@@ -1,16 +1,18 @@
 # payflow
 
-A new Flutter project.
+<p>
+  <img src="https://img.shields.io/badge/made%20by-FELIPE%20ARAUJO-05C11B?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/FelipeCostaAraujo/PayFlow?color=05C11B&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/FelipeCostaAraujo/PayFlow?color=05C11B&style=flat-square">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-05C11B?style=flat-square">
+  </a>
+  <a href="https://github.com/FelipeCostaAraujo/PayFlow/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/FelipeCostaAraujo/PayFlow?color=05C11B&style=flat-square">
+  </a>
+</p>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  Info:
+- Author - Felipe Araujo:
+- Date - JUN/2021:
