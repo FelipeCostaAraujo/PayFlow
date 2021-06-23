@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:payflow/data/auth/auth_controller.dart';
 
 class LoginController{
+  final authController = AuthController();
 
-
-  Future<void> googleSignIn() async {
+  Future<void> googleSignIn(BuildContext context) async {
     GoogleSignIn _googleSignIn = GoogleSignIn(
       scopes: [
         'email',
@@ -11,6 +13,7 @@ class LoginController{
     );
     try {
       final response = await _googleSignIn.signIn();
+      authController.setUser(context, response);
       print(response);
     } catch (error) {
       print(error);
