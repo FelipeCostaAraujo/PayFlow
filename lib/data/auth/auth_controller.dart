@@ -1,8 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:payflow/data/models/models.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:payflow/data/models/models.dart';
+import 'package:payflow/ui/pages/pages.dart';
+
 
 class AuthController{
   final String userPath = "user";
@@ -13,9 +16,9 @@ class AuthController{
   Future<void> setUser(BuildContext context, user) async{
     if(user != null){
       await saveUser(user);
-      Navigator.pushReplacementNamed(context, "/home");
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(user: user),));
     } else {
-      Navigator.pushReplacementNamed(context, "/login");
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
     }
   }
 
