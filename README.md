@@ -1,7 +1,7 @@
 # payflow
 
 <p>
-  <img src="https://img.shields.io/badge/made%20by-FELIPE%20ARAUJO-81D4FA?style=flat-square">
+  <img src="https://img.shields.io/badge/made%20by-Felipe%20Araujo-81D4FA?style=flat-square">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/FelipeCostaAraujo/PayFlow?color=81D4FA&style=flat-square">
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/FelipeCostaAraujo/PayFlow?color=81D4FA&style=flat-square">
   <a href="https://opensource.org/licenses/MIT">
