@@ -65,7 +65,7 @@
    $ git clone https://github.com/FelipeCostaAraujo/PayFlow.git
 
    - Entre no diretório:
-   $ cd nlw-06-flutter
+   $ cd PayFlow
 
    - Instale as dependências:
    $ flutter pub get
